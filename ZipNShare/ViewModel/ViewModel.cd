@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="A2ZKnowledgeVisualsPvtLtd.ZipNShare.ViewModel.ZipExclusion">
+    <Position X="4.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAABAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ZipExclusion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ExclusionType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="A2ZKnowledgeVisualsPvtLtd.ZipNShare.ViewModel.ZipExclusionListTypeConverter">
+    <Position X="3.5" Y="3.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAIAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ZipExclusionListTypeConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="A2ZKnowledgeVisualsPvtLtd.ZipNShare.ViewModel.ZipExclusionTypeConverter">
+    <Position X="0.75" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAIAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ZipExclusionTypeConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="A2ZKnowledgeVisualsPvtLtd.ZipNShare.ViewModel.ZipNShareConfigViewModel" BaseTypeListCollapsed="true">
+    <Position X="0.75" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAACAgCgQAAAQAAAAAAAAAAhABQAAAAAAAAAAQAAAI=</HashCode>
+      <FileName>ViewModel\ZipNShareConfigViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ZipExclusions" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Enum Name="A2ZKnowledgeVisualsPvtLtd.ZipNShare.ViewModel.ExclusionType">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAABAA=</HashCode>
+      <FileName>ViewModel\ExclusionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

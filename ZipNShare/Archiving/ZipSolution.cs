@@ -57,7 +57,8 @@ namespace A2ZKnowledgeVisualsPvtLtd.ZipNShare.Archiving
         }
 
         public static int CreateArchive(string solutionFolder,
-                IList<ZipExclusion> exceptions, string archiveName, string outputFolder, bool overwriteArchive)
+                IList<ZipExclusion> exceptions, string archiveName, 
+                string outputFolder, bool overwriteArchive)
         {
             int filesCount = 0;
             string folderFullPath = Path.GetFullPath(solutionFolder + @"..\");

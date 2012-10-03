@@ -114,7 +114,6 @@ namespace A2ZKnowledgeVisualsPvtLtd.ZipNShare
         private void RunMenuItemCallback(object sender, EventArgs e)
         {
             ArchiveFiles();
-
         }
 
         private void ArchiveFiles()
@@ -134,24 +133,28 @@ namespace A2ZKnowledgeVisualsPvtLtd.ZipNShare
                 string solutionFolder = Path.GetDirectoryName(soln.FullName);
                 string solutionName = Path.GetFileNameWithoutExtension(soln.FullName);
                 numberOfFiles = Archiving.ZipSolution.CreateArchive(solutionFolder,
-                    toolsPage.Exceptions, toolsPage.OutputFileName.Replace("%SOLUTION_NAME%", solutionName), toolsPage.OutputFolder, toolsPage.OverwriteZipFileIfExists);
+                    toolsPage.Exceptions, 
+                    toolsPage.OutputFileName.Replace("%SOLUTION_NAME%", solutionName), 
+                    toolsPage.OutputFolder, 
+                    toolsPage.OverwriteZipFileIfExists);
             }
-            // Show a Message Box to prove we were here
+            
             IVsUIShell uiShell = (IVsUIShell)GetService(typeof(SVsUIShell));
             Guid clsid = Guid.Empty;
-            int result;
             Microsoft.VisualStudio.ErrorHandler.ThrowOnFailure(uiShell.ShowMessageBox(
                        0,
                        ref clsid,
                        "ZipNShare",
-                       string.Format(CultureInfo.CurrentCulture, "FolderName: {0} {1}Exclusions: {2} {1}Number of Files Zipped: {3}", folderName, Environment.NewLine, exclusions, numberOfFiles),
+                       string.Format(CultureInfo.CurrentCulture, 
+                       "FolderName: {0} {1}Exclusions: {2} {1}Number of Files Zipped: {3}", 
+                       folderName, Environment.NewLine, exclusions, numberOfFiles),
                        string.Empty,
                        0,
                        OLEMSGBUTTON.OLEMSGBUTTON_OK,
                        OLEMSGDEFBUTTON.OLEMSGDEFBUTTON_FIRST,
                        OLEMSGICON.OLEMSGICON_INFO,
                        0,        // false
-                       out result));
+                       out numberOfFiles));
         }
 
 

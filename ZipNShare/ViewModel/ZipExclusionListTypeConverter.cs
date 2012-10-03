@@ -9,7 +9,6 @@ namespace A2ZKnowledgeVisualsPvtLtd.ZipNShare.ViewModel
 {
     public class ZipExclusionListTypeConverter : TypeConverter
     {
-        private List<ZipExclusion> values = null;
         public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
         {
             if (sourceType == typeof(string))
@@ -30,23 +29,25 @@ namespace A2ZKnowledgeVisualsPvtLtd.ZipNShare.ViewModel
             return returnValue;
         }
 
-        public override object ConvertFrom(ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value)
+        public override object ConvertFrom(ITypeDescriptorContext context, 
+            System.Globalization.CultureInfo culture, object value)
         {
             if (value.GetType() == typeof(string))
             {
-                values = new List<ZipExclusion>();
+                List<ZipExclusion> values = new List<ZipExclusion>();
                 string[] vals = ((string)value).Split(new char[] { ',' });
                 for (int i = 0; i < vals.Length; i++)
                 {
-                    values.Add((ZipExclusion)(new ZipExclusionTypeConverter()).ConvertFromString(vals[i]));
+                    values.Add((ZipExclusion)(new 
+                        ZipExclusionTypeConverter()).ConvertFromString(vals[i]));
                 }
-
                 return values;
             }
             return base.ConvertFrom(context, culture, value);
         }
 
-        public override object ConvertTo(ITypeDescriptorContext context, System.Globalization.CultureInfo culture, object value, Type destinationType)
+        public override object ConvertTo(ITypeDescriptorContext context, 
+            System.Globalization.CultureInfo culture, object value, Type destinationType)
         {
             List<ZipExclusion> values = value as List<ZipExclusion>;
             if (values != null)

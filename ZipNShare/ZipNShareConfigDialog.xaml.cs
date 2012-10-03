@@ -63,7 +63,7 @@ namespace A2ZKnowledgeVisualsPvtLtd.ZipNShare
             this.DialogResult = true;
         }
 
-        private void SaveButtonClick(object sender, RoutedEventArgs e)
+        private void SaveAndRunButtonClick(object sender, RoutedEventArgs e)
         {
             toolsPage.SaveSettingsToStorage();
             this.TriggerRun = true;

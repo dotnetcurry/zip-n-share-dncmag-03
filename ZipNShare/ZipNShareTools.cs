@@ -13,6 +13,8 @@ namespace A2ZKnowledgeVisualsPvtLtd.ZipNShare
     {
         private string _outputFolder;
         private List<ZipExclusion> _exclusions;
+        private bool _overwriteIfExists;
+        private string _outputFileName;
 
         public ZipNShareTools()
         {
@@ -26,14 +28,13 @@ namespace A2ZKnowledgeVisualsPvtLtd.ZipNShare
             set { _exclusions = value; }
         }
 
-        [EditorAttribute(typeof(System.Windows.Forms.Design.FolderNameEditor), typeof(System.Drawing.Design.UITypeEditor))]
+        [EditorAttribute(typeof(System.Windows.Forms.Design.FolderNameEditor), 
+            typeof(System.Drawing.Design.UITypeEditor))]
         public string OutputFolder
         {
             get { return _outputFolder; }
             set { _outputFolder = value; }
         }
-
-        private string _outputFileName;
 
         [Description("Use %SOLUTION_NAME% to use the respective solution name")]
         public string OutputFileName
@@ -41,8 +42,6 @@ namespace A2ZKnowledgeVisualsPvtLtd.ZipNShare
             get { return _outputFileName; }
             set { _outputFileName = value; }
         }
-
-        private bool _overwriteIfExists;
 
         public bool OverwriteZipFileIfExists
         {
